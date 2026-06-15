@@ -1,57 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yuthmika Vidana Gamage</title>
-
-    <link rel="stylesheet" href="index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yuthmika Gamage – Portfolio</title>
+  <link rel="stylesheet" href="shared.css" />
+  <link rel="stylesheet" href="index.css" />
 </head>
 <body>
 
-    <section class="myname">
-        <h1>Hi, I'm Yuthmika Vidana Gamage 👋</h1>
-        <p>University of Westminster</p>
-    </section>
+  <nav>
+    <a class="logo" href="index.html">YVG</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul id="navMenu">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-    <section class="higerab">
-        <div class="abSection">
-            <h1>About Me</h1>
+  <section class="myname fade-up">
+    <p class="eyebrow">Software Engineering Student</p>
+    <h1>Hi, I'm<br><span class="accent">Yuthmika Vidana Gamage</span></h1>
+    <p class="subtitle">University of Westminster &nbsp;·&nbsp; Richmondite</p>
+    <a href="projects.html" class="hero-cta">View My Work</a>
+  </section>
 
-            <div class="about">
-
-                <div class="text">
-                    <p>
-                        I am currently pursuing a Software Engineering degree at the University of Westminster, UK,
-                        with a strong dedication to continuous learning and professional development. I am originally
-                        from Galle, Sri Lanka, and currently reside in Pannipitiya, Colombo. After completing my
-                        Ordinary Level examinations at Richmond College, Galle, I pursued higher education at the
-                        Informatics Institute of Technology (IIT). Following this, I advanced my studies at the
-                        University of Westminster.
-                    </p>
-                </div>
-
-            </div>
+  <section class="higerab">
+    <div class="abSection slide-in">
+      <h2>About Me</h2>
+      <div class="about">
+        <div class="image">
+          <img class="photo-placeholder" src="./assets/myself.png" alt="Yuthmika Vidana Gamage" />
         </div>
-    </section>
+        <div class="text">
+          <p>
+            I am currently pursuing a Software Engineering degree at the University of Westminster, UK,
+            with a strong dedication to continuous learning and professional development. I am originally from Galle,
+            Sri Lanka, and currently reside in Pannipitiya, Colombo. After completing my Ordinary Level
+            examinations at Richmond College, Galle, I pursued higher education at the Informatics Institute of
+            Technology (IIT). Following this, I advanced my studies at the University of Westminster.
+          </p>
+          <a href="about.html" class="seeMore">See More</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <h3>Yuthmika Vidana Gamage</h3>
-        <p>Software Engineering Undergraduate</p>
-        <p>Email: vanujyuthmika@example.com</p>
+  <footer>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/yuthmika-gamage-187bb4296/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/yuthmikagamage" target="_blank">GitHub</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <p>© 2026 Yuthmika Vidana Gamage. All rights reserved.</p>
+  </footer>
 
-        <p>
-            GitHub:
-            <a href="https://github.com/yuthmikagamage" target="_blank">
-                github.com/yuthmikagamage
-            </a>
-        </p>
+  <script>
+    document.getElementById('navToggle').addEventListener('click', () => {
+      document.getElementById('navMenu').classList.toggle('open');
+    });
 
-        <p class="copyright">
-            © 2026 Yuthmika Vidana Gamage. All Rights Reserved.
-        </p>
-    </footer>
-
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.fade-up, .slide-in').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>

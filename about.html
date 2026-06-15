@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About – Yuthmika Gamage</title>
+  <link rel="stylesheet" href="shared.css" />
+  <link rel="stylesheet" href="about.css" />
+</head>
+<body>
+
+  <nav>
+    <a class="logo" href="index.html">YVG</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="about-section fade-up">
+    <h1>About Me</h1>
+  </div>
+
+  <div class="skills fade-up">
+    <div class="skills-toggle">
+      <button class="toggle-btn active" id="btnTechnical" onclick="toggleSkills('technical')">Technical Skills</button>
+      <button class="toggle-btn" id="btnSoft" onclick="toggleSkills('soft')">Soft Skills</button>
+    </div>
+
+    <div class="skills-container">
+      <div class="skills-group active" id="technicalGroup">
+        <div class="skill-card">
+          <div class="skill-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <div class="skill-name">Java</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+          </div>
+          <div class="skill-name">Python</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+          </div>
+          <div class="skill-name">React.js</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
+          </div>
+          <div class="skill-name">HTML</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+          </div>
+          <div class="skill-name">CSS</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
+          <div class="skill-name">MySQL</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
+          </div>
+          <div class="skill-name">Git</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+          </div>
+          <div class="skill-name">Figma</div>
+        </div>
+      </div>
+
+      <div class="skills-group" id="softGroup">
+        <div class="skill-card">
+          <div class="skill-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><circle cx="12" cy="12" r="10"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <div class="skill-name">Problem Solving</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="skill-name">Teamwork</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <div class="skill-name">Critical Thinking</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="skill-name">Project Management</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <div class="skill-name">Leadership</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="education">
+    <h1>Education</h1>
+    <div class="institutes">
+      <div class="education-item slide-in">
+        <h2>Informatics Institute of Technology</h2>
+        <p>After completing my O/Ls, I enrolled at the Informatics Institute of Technology (IIT) in Colombo to pursue a Level 3 Foundation Certificate in Software Engineering. This foundational course provided me with a strong entry point into the world of technology.</p>
+        <p><b>Grade – Merit</b></p>
+      </div>
+      <div class="education-item slide-in">
+        <h2>University of Westminster</h2>
+        <p>I am currently pursuing a degree in Software Engineering at the University of Westminster, a respected institution known for its innovative approach to education and emphasis on real-world application.</p>
+        <p><b>Undergraduate</b></p>
+      </div>
+      <div class="education-item slide-in">
+        <h2>Richmond College, Galle</h2>
+        <p>I successfully completed the Ordinary Level (OL) exams at Richmond College in Galle. This experience has provided me with valuable skills and knowledge that I am eager to apply in my future endeavors.</p>
+        <p><b>Grade – 8A, 1B</b></p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/yuthmika-gamage-187bb4296/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/yuthmikagamage" target="_blank">GitHub</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <p>© 2024 Yuthmika Vidana Gamage. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('navToggle').addEventListener('click', () => {
+      document.getElementById('navMenu').classList.toggle('open');
+    });
+
+    function toggleSkills(type) {
+      const techGroup = document.getElementById('technicalGroup');
+      const softGroup = document.getElementById('softGroup');
+      const btnTech = document.getElementById('btnTechnical');
+      const btnSoft = document.getElementById('btnSoft');
+      if (type === 'technical') {
+        techGroup.classList.add('active');
+        softGroup.classList.remove('active');
+        btnTech.classList.add('active');
+        btnSoft.classList.remove('active');
+      } else {
+        softGroup.classList.add('active');
+        techGroup.classList.remove('active');
+        btnSoft.classList.add('active');
+        btnTech.classList.remove('active');
+      }
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up, .slide-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

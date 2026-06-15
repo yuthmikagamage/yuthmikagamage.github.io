@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – Yuthmika Gamage</title>
+  <link rel="stylesheet" href="shared.css" />
+  <link rel="stylesheet" href="contact.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+
+  <nav>
+    <a class="logo" href="index.html">YVG</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="header fade-up">
+    <h1>Contact Me</h1>
+    <h3>Feel Free to Contact Me Anytime</h3>
+    <button class="button" onclick="window.open('https://www.linkedin.com/in/yuthmika-gamage-187bb4296/','_blank')">LinkedIn</button>
+    <button class="button" onclick="window.open('https://wa.link/9dbxcq','_blank')">WhatsApp</button>
+  </div>
+
+  <div class="message">
+    <div class="contact-container fade-up">
+      <form id="contactForm" class="form">
+        <input type="text" name="user_name" placeholder="Name" class="input-field" />
+        <input type="email" name="user_email" placeholder="Email" class="input-field" />
+        <textarea name="message" placeholder="Your message" rows="5" class="input-field"></textarea>
+        <button class="send-button" type="submit">Send Message</button>
+        <p class="confirmation-message" id="statusMsg"></p>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/yuthmika-gamage-187bb4296/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/yuthmikagamage" target="_blank">GitHub</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <p>© 2024 Yuthmika Vidana Gamage. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('navToggle').addEventListener('click', () => {
+      document.getElementById('navMenu').classList.toggle('open');
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    emailjs.init('i8PcaDNDgJ63pot_1');
+
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const statusMsg = document.getElementById('statusMsg');
+      const name = this.user_name.value.trim();
+      const email = this.user_email.value.trim();
+      const message = this.message.value.trim();
+
+      if (!name || !email || !message) {
+        statusMsg.textContent = 'Please fill in all fields before submitting.';
+        statusMsg.style.color = '#a55';
+        return;
+      }
+
+      emailjs.sendForm('service_hywa558', 'template_x548z34', this)
+        .then(() => {
+          statusMsg.textContent = 'Your message has been sent successfully!';
+          statusMsg.style.color = '#4a7c4a';
+          this.reset();
+        })
+        .catch((error) => {
+          console.error('FAILED...', error);
+          statusMsg.textContent = 'Oops! Something went wrong. Please try again.';
+          statusMsg.style.color = '#a55';
+        });
+    });
+  </script>
+</body>
+</html>
