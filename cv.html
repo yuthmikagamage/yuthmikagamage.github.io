@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yuthmika Gamage - CV</title>
+
+  <link rel="stylesheet" href="shared.css" />
+  <link rel="stylesheet" href="cv.css" />
+</head>
+<body>
+
+  <nav>
+    <a class="logo" href="index.html">YVG</a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="cv.html" class="active">CV</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="cv-page">
+
+    <section class="cv-section fade-up">
+
+      <h1>Curriculum Vitae</h1>
+
+      <div class="cvIMG">
+        <img src="./assets/first.png" alt="CV Page 1" />
+        <img src="./assets/Second.png" alt="CV Page 2" />
+      </div>
+
+      <div class="download">
+        <a
+          href="https://drive.google.com/uc?export=download&id=1-vY6kC7MEC6imzsJQJA2wSYxm-q6PYPR"
+          class="download-btn"
+        >
+          Download CV
+        </a>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/yuthmika-gamage-187bb4296/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/yuthmikagamage" target="_blank">GitHub</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <p>© 2026 Yuthmika Vidana Gamage. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('navToggle').addEventListener('click', () => {
+      document.getElementById('navMenu').classList.toggle('open');
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
