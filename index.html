@@ -6,6 +6,15 @@
   <title>Yuthmika Gamage – Portfolio</title>
   <link rel="stylesheet" href="shared.css" />
   <link rel="stylesheet" href="index.css" />
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
 </head>
 <body>
 
@@ -24,10 +33,15 @@
   </nav>
 
   <section class="myname fade-up">
-    <p class="eyebrow">Software Engineering Student</p>
-    <h1>Hi, I'm<br><span class="accent">Yuthmika Vidana Gamage</span></h1>
-    <p class="subtitle">University of Westminster &nbsp;·&nbsp; Richmondite</p>
-    <a href="projects.html" class="hero-cta">View My Work</a>
+    <div class="myname-text">
+      <p class="eyebrow">Software Engineering Student</p>
+      <h1>Hi, I'm<br><span class="accent">Yuthmika Vidana Gamage</span></h1>
+      <p class="subtitle">University of Westminster &nbsp;·&nbsp; Richmondite</p>
+      <a href="projects.html" class="hero-cta">View My Work</a>
+    </div>
+
+    <div class="myname-model" id="modelContainer">
+    </div>
   </section>
 
   <section class="higerab">
@@ -70,5 +84,6 @@
     }, { threshold: 0.15 });
     document.querySelectorAll('.fade-up, .slide-in').forEach(el => observer.observe(el));
   </script>
+  <script type="module" src="hero-model.js"></script>
 </body>
 </html>
